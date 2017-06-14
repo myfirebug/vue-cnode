@@ -107,6 +107,7 @@
 				});
 	    	},
 	    	comShow(item){
+	    		alert(this.$store.state.accesstoken);
 	    		if(!this.accesstoken){
 	    			this.$router.push({
 	    				name:'login'

@@ -34,9 +34,6 @@
 
 <style lang="scss">
     @import './assets/scss/common.scss';
-    html{
-        overflow: hidden;
-    }
     .pop{
         position: absolute;
         left:0;

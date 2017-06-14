@@ -6,32 +6,32 @@ import * as mutations from './mutations'*/
 
 Vue.use(Vuex);
 
-const state = JSON.parse(localStorage.getItem('user')) || {};
+const state = JSON.parse(window.localStorage.getItem('user')) || {};
 
 const mutations = {
 	LOGINOUT(state,payload){
-		localStorage.removeItem('user');
+		window.localStorage.removeItem('user');
 		state.loginname = '';
 		state.accesstoken = '';
 	},
 	LOGININ(state,payload){
-		localStorage.setItem('user',JSON.stringify(payload));
+		window.localStorage.setItem('user',JSON.stringify(payload));
 		state.loginname = payload.loginname;
 		state.accesstoken = payload.accesstoken;
 	},
 }
 
 const actions = {
-	logginout({commit},payload){
+	LOGINOUT({commit},payload){
 		commit('LOGINOUT');
 	},
-	logginin({commit},payload){
+	LOGININ({commit},payload){
 		commit('LOGININ',payload);
 	}
 }
 
 const getters = {
-
+	
 }
 
 

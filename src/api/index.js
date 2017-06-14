@@ -9,4 +9,7 @@ export default {
 	getTopic(params){
         return axios.get(`${baseUrl}/topic/${params.accesstoken}?mdrender=${params.mdrender}`)
     },
+    checkAccesstoken(params){
+        return axios.post(`${baseUrl}/accesstoken`,params)
+    },
 }
