@@ -86,7 +86,7 @@
 	    	fetch(){
 	    		Api.getTopic({
 					'accesstoken': this.$route.params.topicId,
-					'mdrender' : false
+					'mdrender' : false 
 				})
 				.then((res)=>{
 					this.details = res.data.data;
